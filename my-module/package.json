@@ -1,0 +1,43 @@
+{
+  "name": "my-module",
+  "version": "0.1.0",
+  "description": "My new module",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module",
+    "open:ios": "xed example/ios",
+    "open:android": "open -a \"Android Studio\" example/android"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "my-module",
+    "MyModule"
+  ],
+  "repository": "https://github.com/zerozoo-a/my-module",
+  "bugs": {
+    "url": "https://github.com/zerozoo-a/my-module/issues"
+  },
+  "author": "zoo <zerozoo385@gmail.com> (https://github.com/zerozoo-a)",
+  "license": "MIT",
+  "homepage": "https://github.com/zerozoo-a/my-module#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "~19.1.1",
+    "expo-module-scripts": "^55.0.2",
+    "expo": "55.0.10-canary-20260327-0789fbc",
+    "react-native": "0.82.1"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  }
+}
