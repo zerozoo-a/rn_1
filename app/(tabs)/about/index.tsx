@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -8,6 +8,7 @@ import Animated, {
 
 function Box() {
   const translateX = useSharedValue(0);
+  const moved = useSharedValue(false);
 
   const animatedStyle = useAnimatedStyle(() => ({
     transform: [{ translateX: translateX.value }],
@@ -21,10 +22,15 @@ function Box() {
           animatedStyle,
         ]}
       >
-        <Button
-          title="move"
+        <Pressable
+          style={{ flex: 1 }}
           onPress={() => {
-            translateX.value = withSpring(200);
+            if (moved.value) {
+              translateX.value = withSpring(0);
+            } else {
+              translateX.value = withSpring(200);
+            }
+            moved.value = !moved.value;
           }}
         />
       </Animated.View>
